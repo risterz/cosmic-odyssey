@@ -25,6 +25,7 @@ interactive 3D worlds, and the quiet wonder of deep space.
 
 <br />
 
+[**Enter the universe ↗**](https://cosmic-odyssey.pages.dev) &nbsp; · &nbsp;
 [**Launch locally**](#-launch-in-60-seconds) &nbsp; · &nbsp;
 [**Discover the journey**](#-the-flight-plan) &nbsp; · &nbsp;
 [**Explore the code**](#%EF%B8%8F-under-the-hood) &nbsp; · &nbsp;
@@ -235,7 +236,11 @@ npx playwright test
 
 ## ☁️ Deploy your odyssey
 
-Cosmic Odyssey is a static Vite application. Deploy `dist/` to **Netlify**, **Vercel**, **Cloudflare Pages**, or any static host.
+**Live on Cloudflare Pages: [cosmic-odyssey.pages.dev](https://cosmic-odyssey.pages.dev).**
+
+The `main` branch of this GitHub repository is connected to Cloudflare Pages. Every push triggers a production build; other branches receive preview deployments. No environment variables are required.
+
+You can also deploy `dist/` to **Netlify**, **Vercel**, or any static host.
 
 | Setting | Value |
 | :--- | :--- |
