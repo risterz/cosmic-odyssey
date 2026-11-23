@@ -1,4 +1,9 @@
 import { defineConfig } from '@playwright/test';
+import { existsSync } from 'node:fs';
+
+const systemChrome = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+const executablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH
+  ?? (process.platform === 'win32' && existsSync(systemChrome) ? systemChrome : undefined);
 
 export default defineConfig({
   testDir: './tests',
@@ -9,7 +14,7 @@ export default defineConfig({
     baseURL: 'http://127.0.0.1:4173',
     viewport: { width: 1440, height: 900 },
     launchOptions: {
-      executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
+      executablePath,
       args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'],
     },
   },
