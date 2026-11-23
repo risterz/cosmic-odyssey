@@ -1,0 +1,9 @@
+node_modules/
+.venv/
+dist/
+tsconfig.tsbuildinfo
+playwright-report/
+test-results/
+*.local
+*.tsbuildinfo
+.venv/
